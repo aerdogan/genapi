@@ -8,6 +8,7 @@ api_router = APIRouter()
 
 # User endpoints
 user_router = create_generic_routes(User, UserCreate, UserUpdate, UserResponse, "users")
+
 api_router.include_router(user_router, prefix="/users", tags=["Users"])
 
 
